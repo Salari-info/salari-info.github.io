@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/R.png" type="image/x-icon">
+    <title>vpn hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="css/js/send.js"></script>
+</head>
+
+<body>
+    <!-- <div dir="rtl" class="chnges">
+        <input type="button" id="chnges" onclick="change()" >
+    </div> -->
+    <h1 class="h1">
+        <span><p id="vpn" class="vpn">VPN</p></span>
+        <span><p id="hub" class="hub">hub</p></span>
+    </h1>
+
+    <center style="margin-top: 120px;">
+        <button type="button" onclick="error()" >
+            <h1 id="Download" >Download</h1>
+            <h3 id="F_android">for android</h3>
+        </button>
+        <button type="button"  onclick="error()">
+            <h1 id="Download2" >Download</h1>
+            <h3 id="F_windows">for windows</h3>
+        </button><br>
+
+        
+        <!-- <button type="button" onclick="location.href='https://github.com/Salari-info/chatgpt-flutter/releases/download/chat/chat-GPT.fro.windows.rar';">
+            <h1>Download</h1>
+            <h3>for ios</h3>
+        </button>
+        <button type="button">
+            <h1>Download</h1>
+            <h3>for macOS</h3>
+        </button>
+        <button type="button">
+            <h1>Download</h1>
+            <h3>for linux</h3>
+        </button> -->
+        <h2 id="Picture">Picture :</h2>
+        <div style="width: 100%;  overflow-x: auto; white-space: nowrap;">
+            <img src="img/photo10367412207.jpg" alt="Image 1" style="display: inline-block; max-width: 150px; border-radius: 10px;">
+            <img src="img/photo10367411753.jpg" alt="Image 1" style="display: inline-block; max-width: 150px; border-radius: 10px;">
+        
+        </div>
+
+        <input type="text" class="name" id="name" placeholder="name">
+        <textarea name="" id="messagef" cols="40" rows="10" placeholder="Feed back"></textarea>
+        <input type="button" onclick="sendmessge()" id="btn" class="btn" value="Send"></input>
+
+        <footer id="footer">
+        </footer>
+    </center>
+
+</body>
+<script>
+
+    // var _bool = true; //en
+    // document.getElementById('footer').innerHTML= 'Created by <a href="../../index.html">MR.Salari</a>';
+    // document.getElementById('chnges').value = 'Fa';
+
+
+    // function change(){
+    //     if (_bool == true) {
+    //         _bool = false;
+    //         document.getElementById('footer').innerHTML = 'ساخته شده توسط <a href="../../index.html">اقای سالاری</a>';
+    //         document.getElementById('chnges').value = 'En';
+    //         document.getElementById('Download').innerText = 'دانلود';
+    //         document.getElementById('Download2').innerText = 'دانلود';
+    //         document.getElementById('F_android').innerText = 'برای اندروید';
+    //         document.getElementById('F_windows').innerText = 'برای ویندوز';
+    //         document.getElementById('vpn').innerText = 'فیلترشکن';
+    //         document.getElementById('hub').innerText = 'کلبه';
+    //         document.getElementById('btn').value = 'ارسال';
+    //         document.getElementById('messagef').placeholder = 'بازخورد';
+    //         document.getElementById('name').placeholder = 'نام';
+    //         document.getElementById('Picture').innerHTML = 'تصاویر :';
+
+    //     }else{
+    //         _bool = true;
+    //         document.getElementById('footer').innerHTML = 'Created by <a href="../../index.html">Mr.Salari</a>';
+    //         document.getElementById('chnges').value = 'Fa';
+    //         document.getElementById('Download').innerText = 'Download';
+    //         document.getElementById('Download2').innerText = 'Download';
+    //         document.getElementById('F_android').innerText = 'for android';
+    //         document.getElementById('F_windows').innerText = 'for windows';
+    //         document.getElementById('vpn').innerText = 'VPN';
+    //         document.getElementById('hub').innerText = 'hub';
+    //         document.getElementById('btn').value = 'Send';
+    //         document.getElementById('messagef').placeholder = 'ّFeed Back';
+    //         document.getElementById('name').placeholder = 'ّname';
+    //         document.getElementById('Picture').innerHTML = 'Picture :';
+
+    //     }
+
+    // }
+
+    function error(){
+        alert   
+    }
+</script>
+</html>

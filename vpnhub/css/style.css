@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "font";
+    src: url("../../../res/fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+    font-family: 'vazir';
+    src: url('../../../res/fonts/Vazir-Regular.ttf');
+}
+*{
+    font-family: "vazir";
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: #211f1e;
+    background-color: #211f1efb;
+}
+img{
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+.name{
+    width: 300px;
+    margin-top: 90px;
+    border: none;
+    display: flex;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    background: #1f1c1c;
+    border: 1px solid #3b3b3b;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.527);
+    font-size: 0.9rem;
+    min-width: 120px;
+    color: #ffffff;
+}
+
+textarea{
+    width: 300px;
+    display: flex;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #1f1c1c;
+    /* border: 1px solid #3b3b3b; */
+    border: 1px solid #3b3b3b ;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.527);
+    font-size: 0.9rem;
+    min-width: 120px;
+    color: #ffffff;
+}
+
+.btn{
+    margin: 8px;
+    width: 320px;
+    height: 58px;
+    background: #1f1c1c;
+    border: 1px solid #3b3b3b;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.527);
+    font-size: 0.9rem;
+    min-width: 120px;
+    color: #ffffff;
+}
+
+#Picture{
+    color: white;
+    padding-left: 16px;
+    padding-top: 70px;
+}
+
+.btn:hover{
+    background-color: rgb(255, 166, 0);
+}
+
+button:hover{
+    background-color: rgb(255, 166, 0);
+}
+
+
+.h1{
+    margin-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: bottom;
+    height: 4rem;
+    font-size: 60px;
+}
+p{
+    padding: 7px;
+}
+/* #chnges{
+    width: 55px;
+    height: 55px;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.527);
+    background: #1f1c1c;
+    border: 1px solid #3b3b3b;
+} */
+.chnges{
+    padding: 10px;
+}
+.vpn{
+    color: white;
+}
+.hub{
+    padding: 5px;
+    background: orange;
+    color: black;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: orange;
+    font-family: 'font';
+}
+button{
+    margin: 8px;
+    width: 280px;
+    height: 125px;
+    background: #1f1c1c;
+    border: 1px solid #3b3b3b;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.527);
+    font-size: 0.9rem;
+    min-width: 120px;
+    color: #ffffff;
+}
+footer{
+    margin-top: 60px;
+    font-size: 20px;
+    color: #ffffff;
+}
