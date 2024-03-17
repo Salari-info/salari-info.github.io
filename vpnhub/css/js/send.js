@@ -13,8 +13,9 @@ function sendmessge () {
             url:"https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage",
             data:{chat_id:"915303220", text:String(text_send)},
         });
+    alert("Your Feed Back has been sent");
         
     } catch {
-        alert('Error in send Feed Back')
+        alert('error in send Feed Back')
     }
 }
