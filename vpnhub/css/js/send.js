@@ -4,7 +4,7 @@ function sendmessge () {
     var name = document.getElementById('name').value
     document.getElementById('messagef').value = ''
     document.getElementById('name').value = ''
-    var text_send = "💬 | #پیام_جدید \n نام: " + String(name) + "\nمتن پیام : \n " + String(text);
+    var text_send = "💬 | #پیام_جدید \n نام: " + String(name) + "\nمتن پیام : \n\n " + String(text);
     try {
         $.ajax({
             type:'post',
