@@ -194,23 +194,30 @@
             <h1 class="heading">ناشناس حرفت رو بهم بگو</h1>
             <div class="row">
                 <form action="" id="form-msg">
-                    <textarea name="" class="message" id="message" cols="30" rows="10" placeholder="متن پیام"></textarea>
+                    <textarea name="" class="message" onclick="sendmessge()" id="message" cols="30" rows="10" placeholder="متن پیام"></textarea>
                     <button type="submit" class="btn"> ارسال پیام </button>
-                    <script>
-                        document.getElementById('form-msg').addEventListener("submit", function (event) {
-                            var msg = document.getElementsByClassName("message").value;
-                            var text_send = "💬 | #پیام_جدید \n متن پیام:\n " + String(msg);
-                            $.ajax({
-                                type: 'post',
-                                mode: "cors",
-                                cache: "no-cache",
-                                url: "https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage",
-                                data: { chat_id: "915303220", text: text_send },
-                            });
-
-                        })
-                    </script>
+             
                 </form>
+
+function sendmessge () {
+    var text = document.getElementById('message').value
+    document.getElementById('message').value = ''
+    var text_send = "💬 | #پیام_جدید #vpnhub \n نام: " + String(name) + "\nمتن پیام : \n\n " + String(text);
+    try {
+        $.ajax({
+            type:'post',
+            mode: "cors",
+            cache: "no-cache",
+            url:"https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage",
+            data:{chat_id:"915303220", text:String(text_send)},
+        });
+
+    } catch {
+    }
+}
+
+
+     
 
 </body>
 
