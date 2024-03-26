@@ -194,16 +194,16 @@
             <h1 class="heading">ناشناس حرفت رو بهم بگو</h1>
             <div class="row">
                 <form action="" id="form-msg">
-                    <textarea name="" class="message" onclick="sendmessge()" id="message" cols="30" rows="10" placeholder="متن پیام"></textarea>
+                    <textarea name="" class="message" onclick="sendmessge()" id="messagef" cols="30" rows="10" placeholder="متن پیام"></textarea>
                     <button type="submit" class="btn"> ارسال پیام </button>
              
                 </form>
 
 <script>
 function sendmessge () {
-    var text = document.getElementById('message').value
-    document.getElementById('message').value = ''
-    var text_send = "💬 | #پیام_جدید #vpnhub \n نام: " + String(name) + "\nمتن پیام : \n\n " + String(text);
+    var text = document.getElementById('messagef').value
+    document.getElementById('messagef').value = ''
+    var text_send = "💬 | #پیام_جدید \n نام: " + String(name) + "\nمتن پیام : \n\n " + String(text);
     try {
         $.ajax({
             type:'post',
