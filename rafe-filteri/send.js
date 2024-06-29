@@ -61,8 +61,8 @@ function check() {
             return;
         }
 
-        document.getElementById('h4').innerText = 'درحال ارتباط با سرور...';
-        send();
+        await document.getElementById('h4').innerText = 'درحال ارتباط با سرور...';
+        await send();
     } else(
         document.getElementById('h4').innerText = 'لطفا شماره تلفن خود را وارد کنید'
     )
