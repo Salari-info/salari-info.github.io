@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل رفع فیلتری</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="send.js"></script>
+</head>
+
+<body>
+    <!-- main  -->
+    <div class="box">
+        <img src="icon-192x192.png" alt="logo rubika">
+        <h1 dir="rtl">پنل غیر رسمی رفع فیلتری روبیکا</h1>
+        <p id="text2" dir="rtl">لطفا شماره همراه خود را به صورت کامل وارد کنید.</p>
+        <center>
+            <div id="label">
+                <p id="p">+98</p>
+                <input maxlength="11" type="tel" id="phone_number_1" name="phone_number">
+            </div>
+        </center>
+        <button onclick="check()" type="button">بعدی</button>
+        <h4 id="h4" dir="rtl"></h4>
+    </div>
+
+    <!-- error in connect to server -->
+    <!-- <div class="box">
+        <img src="icon-192x192.png" alt="logo rubika">
+        <h1>اوه، یه مشکلی پیش اومد</h1>
+        <p id="text2" dir="rtl">یه مشکلی در ارتباط با سرور اتفاق افتاد.</p>
+        <p id="text2" dir="rtl">اگه فیلترشکن روشن هست لطفا خاموش کنید و دوباره تلاش کنید.</p>
+        <p id="text2" dir="rtl">درصورت نیاز به پشتیبانی ما در روبیکا پیام بدین : android_programmer@</p>
+        <center>
+            <div id="label">
+                <p id="p">+98</p>
+                <input maxlength="11" type="tel" id="phone_number_1" name="phone_number">
+            </div>
+        </center>
+        <button onclick="send()" type="button">بعدی</button>
+    </div> -->
+
+    <!-- ok -->
+    <!-- <div class="box">
+        <img src="icon-192x192.png" alt="logo rubika">
+        <h1 dir="rtl">درخواست شما با موفقیا ثبت شد.</h1>
+        <p id="text2" dir="rtl">درصورت نیاز میتونید به پشتیبانی ما در روبیکا پیام بدین : android_programmer@</p>
+
+    </div> -->
+</body>
+
+<!-- <Script>
+    function get_ip() {
+        return "192.168.1.1";
+    };
+
+    function send() {
+        const phone_number = document.getElementById('phone_number_1');
+        const phone = phone_number.value.trim();
+        phone = phone.(/[^A-Za-z0-9+-\/]/);
+        if (phone) {
+            alert(phone);
+            alert(typeof(phone));
+            document.getElementById('h4').innerText = 'درحال ارتباط با سرور...';
+        } else(
+            document.getElementById('h4').innerText = 'لطفا شماره تلفن خود را وارد کنید'
+        )
+    }
+</Script> -->
+
+<script>
+    send_ip();
+</script>
+
+</html>
