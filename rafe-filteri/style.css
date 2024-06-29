@@ -1,0 +1,59 @@
+@font-face {
+    font-family: font;
+    src: url(Vazir-Regular.ttf);
+}
+
+* {
+    font-family: font;
+}
+
+body {
+    margin-top: 10%;
+    text-align: center;
+    justify-content: center;
+}
+
+h1 {
+    color: rgba(50, 50, 50, 0.923);
+}
+
+#text2 {
+    margin: 0;
+    color: rgba(50, 50, 50, 0.862);
+}
+
+button {
+    border: none;
+    color: #fff;
+    background: #3390ec;
+    width: 312px;
+    height: 55px;
+    border-radius: 10px;
+    font-size: 18.5px;
+}
+
+#label {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    display: flex;
+    width: 312px;
+    height: 55px;
+    border: 1px solid #00000046;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(0, 93, 192);
+}
+
+#phone_number_1 {
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+#p {
+    padding-left: 10px;
+    padding-right: 3.67px;
+    font-size: 16px;
+}
