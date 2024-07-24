@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ناشناس حرفتو بزن</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1 id="title">ناشناس حرفتو بزن</h1>
+        <input type="text" placeholder="نام (اختیاری)" id="name">
+        <input type="text" placeholder="ایمیل (اختیاری)" id="email">
+        <textarea cols="30" id="textarea" rows="10" placeholder="پیام شما"></textarea>
+        <input id="btn" onclick="send()" type="button" value="ارسال">
+    </center>
+</body>
+
+<script>
+    function clear() {
+        document.getElementById('textarea').value = '';
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+    }
+
+    function send() {
+        var input = document.getElementById('textarea').value;
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var text = "💬 | #پیام_جدید \nنام : " + name + "\nایمیل : " + email + "\nمتن پیام : \n\n" + input;
+        $.ajax({
+            type: 'post',
+            Headers: 'Access-Control-Allow-Origin:*',
+            crossDomain: true,
+            dataType: 'jsonp',
+            mode: "cors",
+            cache: "no-cache",
+            url: "https://tapi.bale.ai/botwT9ArKZEC8Pxy7mSjvMPHsPj6JiJlIEQDX7P7MOT/sendMessage",
+            data: {
+                chat_id: "915303220",
+                text: String(text)
+            },
+        });
+        swal("پیام شما با موفقیت ارسال شد", {
+            icon: "success",
+
+        }).css('background-color', 'black');
+        clear()
+    }
+
+
+    var url = window.location.href;
+    var lastpart = url.substr(url.lastIndexOf('/') + 1);
+    if (lastpart == 'fa') {
+
+    } else if (lastpart == 'en') {
+        document.getElementById('title').innerText = 'speak anonymously';
+        document.getElementById('name').placeholder = 'name (optional)';
+        document.getElementById('email').placeholder = 'email (optional)';
+        document.getElementById('textarea').placeholder = 'your message';
+        document.getElementById('btn').value = 'send';
+    }
+</script>
+
+</html>
